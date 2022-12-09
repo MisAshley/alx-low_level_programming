@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* more headers goes there */
-/* betty style doc for function main goes there */
+
+
 /**
  * main - return alphabets
  *
