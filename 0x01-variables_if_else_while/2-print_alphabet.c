@@ -4,11 +4,10 @@
 /**
  * main - returns alphabets
  *
- * Return: Always 0 (Success
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	
 	int ch = 'a';
 
 	while (ch <= '2')
