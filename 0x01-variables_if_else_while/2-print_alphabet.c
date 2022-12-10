@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int ch - 'a';
+	int ch = 'a';
 
 	while (ch <= '2')
 	{
