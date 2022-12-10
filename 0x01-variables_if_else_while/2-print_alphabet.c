@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 /**
  * main - returns alphabets
  *
@@ -8,6 +9,7 @@
  */
 int main(void)
 {
+	
 	int ch = 'a';
 
 	while (ch <= '2')
