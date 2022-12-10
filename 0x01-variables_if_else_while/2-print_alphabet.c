@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	int (ch = 'a');
+	int ch = 'a';
 
-	while (ch <= '2')
+	while (char <= '2')
 	{
 		putchar(ch);
 		ch++;
