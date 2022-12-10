@@ -1,7 +1,5 @@
-test = test.Replace(" ", "");
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - return alphabets
  *
