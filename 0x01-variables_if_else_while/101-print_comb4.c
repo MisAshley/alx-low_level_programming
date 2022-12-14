@@ -40,14 +40,15 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
-				}
 
+				}
 				c++;
 			}
 			d++;
 		}
 		e++;
 	}
+
 	putchar('\n');
 	return (0);
 }
