@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main'h"
 
 /**
  * puts_half - prints a string, followed by a new line,
@@ -11,7 +11,7 @@ void puts_half(char *str)
 
 	len = 0;
 
-	while (str[len] != '\n')
+	while (str[len] != '\0')
 	{
 		len++;
 	}
