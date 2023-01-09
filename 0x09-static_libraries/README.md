@@ -1,1 +1,1 @@
-containing all the functions
+the functions listed
