@@ -1,50 +1,48 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * *argstostr - convert arguments on command line to strings
- * @ac: int type
- * @av: pointer to array
- * Return: arguments as strings
- */
-
+* *argstostr - concatenates all arguements to the program
+* @ac: arguement count
+* @av: pointer to arguements
+* Return: pointer to new space in memory or null
+**/
 char *argstostr(int ac, char **av)
 {
-	int size, count, count1, count2 = 0;
-	char *ptr;
+	char *strDup;
+	int i, j, k, size;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
 
-	for (count = 0; count < ac; count++)
+	size = 0;
+	/* count the number of chars in each string */
+	for (i = 0; i < ac; i++)
 	{
-		for (count1 = 0; av[count][count1] != '\0'; count1++)
-		{
-			size += 1;
-		}
-		size += 1;
+		for (j = 0; av[i][j] != '\0'; j++)
+			size++;
+		size++;
 	}
-	size += 1;
+	size++;
 
-	ptr = malloc(sizeof(char) * size);
-	if (ptr == NULL)
-	{
-		free(ptr);
+	 /** 
+	  * allocate memory for total number of chars and
+	 * new line for each word
+	 */
+	strDup = malloc(sizeof(char) * size);
+
+	if (strDup == NULL)
 		return (NULL);
-	}
-	for (count = 0; count < ac; count++)
+
+	k = 0;
+	for (i = 0; i < ac; i++)
 	{
-		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			ptr[count2] = av[count][count1];
-			count2++;
+			strDup[k++] = av[i][j];
 		}
-		ptr[count2] = '\n';
-		count2++;
+		strDup[k++] = '\n';
 	}
-	ptr[count2] = '\0';
-	return (ptr);
+	strDup[k] = '\0';
+	return (strDup);
 }
