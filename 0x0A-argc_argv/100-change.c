@@ -31,7 +31,7 @@ for (i = 0; i < 5; ++i)
 {
 number_of_cents += balance / cent_vals[i];
 if ((balance % cent_vals[i]) == 0)
- break;
+break;
 balance %= cent_vals[i];
 }
 printf("%d\n", number_of_cents);
