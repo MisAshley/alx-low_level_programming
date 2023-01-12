@@ -19,7 +19,6 @@ int count_word(char *s)
 		if (s[c] == ' ')
 			flag = 0;
 		else if (flag == 0)
-			printf("%s\n", s[c]);
 		{
 flag = 1;
 			w++;
