@@ -1,1 +1,1 @@
-the static library
+he functions listed
