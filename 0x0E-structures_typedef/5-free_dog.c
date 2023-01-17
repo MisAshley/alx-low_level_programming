@@ -1,16 +1,18 @@
-include "dog.h"
+#include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
-/**
- * free_dog - function to free space
- * @d: pointer to dog typedef type
- * Return: Always success
- */
 
+/**
+ * free_dog - Function that frees memory created in 4-new_dog.c
+ * @d: Input struct
+ * Return: Nothing
+ */
 void free_dog(dog_t *d)
 {
-	if (d == NULL)
-		return;
-	free(d->name);
-	free(d->owner);
-	free(d);
+	if (d != NULL)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
